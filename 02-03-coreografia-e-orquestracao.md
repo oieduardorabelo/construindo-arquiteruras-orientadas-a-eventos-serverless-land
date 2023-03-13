@@ -1,0 +1,9 @@
+# 2.3 Coreografia e Orquestração
+
+Coreografia e orquestração são dois modelos diferentes de como os serviços distribuídos podem se comunicar entre si. Na orquestração, a comunicação é mais rigidamente controlada. Um serviço central coordena a interação e a ordem na qual os serviços são invocados. A coreografia alcança a comunicação sem controle rígido. Os eventos fluem entre os serviços sem nenhuma coordenação centralizada. Muitos aplicativos usam coreografia e orquestração para diferentes casos de uso.
+
+![](https://serverlessland.com/assets/images/eda/orchestration-choreography.png)
+
+A comunicação entre [contextos de negócios](https://martinfowler.com/bliki/BoundedContext.html) é frequentemente como a coreografia é usada de forma mais eficaz. Com a coreografia, os produtores não têm expectativas de como e quando o evento será processado. Os produtores são responsáveis ​​apenas por enviar eventos para um serviço de ingestão de eventos e aderir ao esquema da mensagem. Isso reduz as dependências entre os dois contextos do sistema. Frequentemente dentro de um contexto de negócio, você precisa controlar a sequência de integração de serviços, manter o estado e lidar com erros e novas tentativas. Esses casos de uso são mais adequados para orquestração.
+
+_Event buses_, como [Amazon EventBridge](https://aws.amazon.com/eventbridge/), podem ser usados ​​para coreografia, e serviços de orquestração de fluxo de trabalho, como [AWS Step Functions](https://aws.amazon.com/step-functions/?step-functions.sort-by=item.additionalFields.postDateTime&step-functions.sort-order=desc) ou [Amazon Managed Workflows para Apache Airflow (Amazon MWAA)](https://aws.amazon.com/managed-workflows-for-apache-airflow/), podem ajudar a criar para orquestração. Exemplos de como você pode usar coreografia e orquestração juntos podem incluir o envio de um evento para acionar um fluxo de trabalho do AWS Step Functions, seguido pela emissão de eventos em diferentes etapas.
