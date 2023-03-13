@@ -9,6 +9,10 @@ Architectures](https://serverlessland.com/event-driven-architecture/intro) do [S
 
 [Saiba mais](./src/01-01-introducao-a-arquitetura-orientada-a-eventos.md) sobre arquiteturas orientadas a eventos, incluindo conceitos-chave, práticas recomendadas, serviços da AWS e recursos de introdução.
 
+![Imagem mostrando comunicação do cliente (produtor de eventos) com o agente de eventos (event broker) e os consumidores de eventos](https://serverlessland.com/assets/images/eda/event-producer-broker-consumer.png)
+
+Este guia irá te apresentar a arquiteturas orientadas a eventos. Você vai compreender os padrões das arquiteturas orientadas a eventos e os serviços da AWS usados para implementá-los. Aprenda as práticas recomendadas para criar arquiteturas orientadas a eventos, desde a criação de esquemas de eventos até o tratamento de conceitos como a idempotência. Ao concluir esse guia, você encontrará recursos extras para expandir seu conhecimento em como criar arquiteturas orientadas a eventos na AWS.
+
 ### Índice de conteúdo
 
 **1. Introdução**
